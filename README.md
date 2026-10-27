@@ -1,38 +1,46 @@
-🌿 Eugenia Ramirez - Bitácora de Ingeniería
+# Astro Starter Kit: Basics
 
-Este repositorio contiene el código fuente de mi portafolio personal y bitácora de proyectos, alojado mediante [GitHub Pages](https://eunight.github.io).
+```sh
+npm create astro@latest -- --template basics
+```
 
-El diseño de este sitio sigue una filosofía visual denominada **"Cozy Tech"**. Es un esfuerzo por equilibrar la arquitectura de información rigurosa necesaria para documentar despliegues de servidores, algoritmos de optimización matemática y modelos estocásticos, con una estética cálida y artesanal inspirada en el desarrollo de videojuegos 2D.
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🛠️ Stack Tecnológico (MVP)
+## 🚀 Project Structure
 
-Actualmente, el proyecto está construido como un sitio estático puro para priorizar el rendimiento y la facilidad de despliegue inicial:
+Inside of your Astro project, you'll see the following folders and files:
 
-*   **Estructura:** HTML5 Semántico.
-*   **Estilos:** CSS3 nativo (uso intensivo de CSS Custom Properties para la gestión de temas).
-*   **Interactividad:** Vanilla JavaScript (sin dependencias externas).
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
+```
 
-## 🗂️ Arquitectura de Proyectos
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-El portafolio clasifica el trabajo en tres grandes áreas de especialización:
+## 🧞 Commands
 
-1.  **Infraestructura & Sistemas:** Administración de entornos Proxmox, migraciones de bases de datos y gestión de almacenamiento (ZFS, Solr).
-2.  **Desarrollo Creativo:** Ingeniería de videojuegos (LÖVE2D, Lua) y manejo de físicas de colisión.
-3.  **Ciencia de Datos & Optimización:** Modelado matemático estocástico, optimización y procesamiento de datasets.
+All commands are run from the root of the project, from a terminal:
 
-## 🚀 Despliegue Local
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-Para correr este proyecto en un entorno local, no se requieren dependencias de Node.js. Simplemente:
+## 👀 Want to learn more?
 
-1.  Clona el repositorio:
-    ```bash
-    git clone [https://github.com/TU_USUARIO/eunight.github.io.git](https://github.com/TU_USUARIO/eunight.github.io.git)
-    ```
-2.  Inicia un servidor local:
-    ```bash
-    python3 -m http.server 8000
-    ```
-3.  Abre `http://localhost:8000` en tu navegador.
-
----
-*Diseñado y codificado desde cero. Los pequeños detalles, como el selector de tema y el gato en la navegación, son características intencionales de la interfaz.*
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
