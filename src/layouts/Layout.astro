@@ -1,23 +1,60 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import '../styles/global.css';
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} | Eugenia Ramirez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">~/eugenia/bitácora</div>
+        <ul class="nav-links">
+            <li><a href="/#proyectos">[proyectos]</a></li>
+            <li><a href="/#sobre-mi">[sobre_mí]</a></li>
+            <li class="lang-switch"><a href="/" class="active">ES</a> <a href="/en">EN</a></li>
+        </ul>
+        <div class="controls">
+            <span class="mono-text">Oscuro</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+            <div class="tito-container" title="Tito durmiendo">
+                🐈‍⬛ <span class="mono-text">Tito</span>
+            </div>
+        </div>
+    </nav>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <!-- Aquí Astro inyectará automáticamente el contenido de tus otras páginas -->
+    <slot />
+
+    <script is:inline>
+        const toggleSwitch = document.getElementById('darkModeToggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode' && toggleSwitch) {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        if(toggleSwitch) {
+            toggleSwitch.addEventListener('change', function(e) {
+                if (e.target.checked) {
+                    document.body.classList.add('dark-mode');
+                    localStorage.setItem('theme', 'dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                    localStorage.setItem('theme', 'light-mode');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
