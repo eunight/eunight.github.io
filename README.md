@@ -1,46 +1,63 @@
-# Astro Starter Kit: Basics
+# 🌿 Eugenia Ramirez - Bitácora de Ingeniería
 
-```sh
-npm create astro@latest -- --template basics
-```
+Este repositorio contiene el código fuente de mi portafolio personal y bitácora de proyectos, construido con **[Astro](https://astro.build/)** y desplegado en **GitHub Pages** mediante GitHub Actions (`https://eunight.github.io`).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+El sitio adopta la filosofía visual **"Cozy Tech"**: un equilibrio entre la precisión de la administración de sistemas, la ciencia de datos y la calidez del desarrollo interactivo en 2D.
 
-## 🚀 Project Structure
+## 🛠️ Stack Tecnológico
 
-Inside of your Astro project, you'll see the following folders and files:
+* **Framework:** Astro (SSG - Static Site Generation)
+* **Estilos:** CSS3 nativo con CSS Custom Properties (Soporte de Modo Oscuro)
+* **Internacionalización (i18n):** Enrutamiento estático en Español (`/`) e Inglés (`/en`)
+* **Despliegue:** GitHub Actions CI/CD en Node.js `22.23.4`
+
+## 📁 Estructura del Proyecto
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+/public
+  ├── Cv_Eugenia_Ramirez.pdf
+  └── /assets
+      └── /images/         <-- Capturas, diagramas e ilustraciones
+/src
+  ├── /layouts
+  │   ├── Layout.astro     <-- Layout principal (ES)
+  │   └── LayoutEN.astro   <-- Layout principal (EN)
+  ├── /pages
+  │   ├── index.astro      <-- Landing page (ES)
+  │   ├── /en
+  │   │   ├── index.astro  <-- Landing page (EN)
+  │   │   └── /proyectos   <-- Documentación
+  │   └── /proyectos
+  │       ├── dspace.astro
+  │       ├── proxmox.astro
+  │       ├── calle-luna.astro
+  │       ├── atlas.astro
+  │       └── churn.astro
+  └── /styles
+      └── global.css
 ```
+## 🚀 Desarrollo Local
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+    1. Clona el repositorio:
+    ```bash
 
-## 🧞 Commands
+    git clone [https://github.com/eunight/eunight.github.io.git](https://github.com/eunight/eunight.github.io.git)
+    ```
+    2. Instala las dependencias:
+   ```bash
 
-All commands are run from the root of the project, from a terminal:
+    npm install
+    ```
+    3. Inicia el servidor de desarrollo:
+    ```bash
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+    npm run dev
+    ```
+    4. Construye el sitio para producción:
+    ```bash
 
-## 👀 Want to learn more?
+    npm run build
+    ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+*Diseñado y desarrollado por Eugenia Ramírez.
