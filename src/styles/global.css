@@ -60,6 +60,13 @@ body.dark-mode .tag { background: rgba(255,255,255,0.05); border-color: rgba(255
 .btn { padding: 0.8rem 1.2rem; text-decoration: none; border-radius: 6px; font-size: 0.9rem; font-weight: 600; display: inline-block; cursor: pointer; }
 .btn.primary { background-color: var(--card-systems); color: white; }
 .btn.secondary { border: 1px solid var(--text-primary); color: var(--text-primary); }
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem; /* Espaciado fijo entre los botones */
+    margin-top: 1.5rem; /* Separación del bloque de etiquetas de arriba */
+    flex-wrap: wrap; /* Permite que colapsen en pantallas más pequeñas si no caben */
+}
+
 
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
 .card { padding: 1.5rem; border-radius: 12px; color: white; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-decoration: none; transition: transform 0.2s;}
