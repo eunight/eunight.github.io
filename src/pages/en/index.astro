@@ -20,6 +20,15 @@ import Layout from '../../layouts/Layout.astro';
                 <a href="/Cv_Eugenia_Ramirez.pdf" target="_blank" class="btn secondary">[ Download CV 📄 ]</a>
             </div>
         </div>
+
+        <!-- 🌟 Imagen Cozy Tech inyectada en el Hero en inglés -->
+        <div class="hero-illustration">
+            <img 
+                src="/images/cozy-desk.jpg" 
+                alt="Cozy Tech illustration of server rack, code, and databases" 
+                class="cozy-desk-img"
+            />
+        </div>
     </header>
 
     <section id="projects" class="projects-grid">
@@ -33,16 +42,17 @@ import Layout from '../../layouts/Layout.astro';
         <a href="/en/proyectos/proxmox" class="card systems-card">
             <div class="card-header">02 // INFRASTRUCTURE 🗄️</div>
             <h2>Server Administration</h2>
-            <p>Virtualization management, Proxmox deployment, ZFS file systems, and Nginx reverse proxies.</p>
-            <div class="card-tags"><span>[Proxmox]</span><span>[ZFS]</span><span>[Nginx]</span></div>
+            <p>Virtualization management, Proxmox deployment, ZFS file systems, and Nginx reverse proxies at the Telecommunications and Services Department.</p>
+            <div class="card-tags"><span>[Proxmox]</span><span>[ZFS]</span><span>[Nginx]</span><span>[PM2]</span></div>
         </a>
 
         <a href="/en/proyectos/huellasacasa" class="card dev-card">
             <div class="card-header">03 // CREATIVE DEV ⚔️</div>
             <h2>Paws to Home</h2>
-            <p>2D platformer video game built with Lua and LÖVE2D featuring custom collision physics.</p>
-            <div class="card-tags"><span>[Lua]</span><span>[LÖVE2D]</span></div>
+            <p>2D platformer video game built with Lua and LÖVE2D featuring custom collision physics and Tiled rendering.</p>
+            <div class="card-tags"><span>[Lua]</span><span>[LÖVE2D]</span><span>[Tiled]</span></div>
         </a>
+
         <a href="/en/proyectos/atlas" class="card data-card">
             <div class="card-header">04 // DATA SCIENCE 🔬</div>
             <h2>ATLAS Pipeline - El Físico Remoto</h2>
@@ -58,18 +68,35 @@ import Layout from '../../layouts/Layout.astro';
         </a>
     </section>
 
+    <!-- 🌟 Sección About Me actualizada con el diseño dividido -->
     <section id="about-me" class="about-section">
-        <div class="card about-card">
-            <div class="about-content">
-                <h2>~/About_me</h2>
-                <p>I am a Systems Engineering student at Universidad de Los Andes and an IT Support Assistant at the ULA Telecommunications and Services Department. I specialize in building and administering IT infrastructure (Linux, Proxmox, ZFS) to ensure network service availability, while concurrently developing software architectures and analytical interfaces.</p>
+        <div class="about-header">
+            <h2>~/About_me 💻</h2>
+            <p class="about-subtitle">Location: Mérida, Venezuela ⛰️ // Role: Systems Engineering Student (ULA) & IT Support Assistant (DTES)</p>
+        </div>
+
+        <div class="about-card-split">
+            <div class="about-content-box">
+                <p>I am a Systems Engineering student at Universidad de Los Andes (ULA) and an IT Support Assistant at the Telecommunications and Services Department (DTES). I specialize in building and administering IT infrastructure (Linux, Proxmox, ZFS) to ensure network service availability, while concurrently developing software architectures and analytical interfaces.</p>
                 <br>
-                <p>When I am not executing repository migrations in PostgreSQL, wrestling with C++ code, or fine-tuning physics collisions in Lua, you will likely find me baking desserts, playing Stardew Valley, or hanging out with my cat, Tito.</p>
-                <div class="social-links">
-                    <a href="https://github.com/eunight" target="_blank" class="btn secondary">[ GitHub ]</a>
-                    <a href="https://www.linkedin.com/in/eunight" target="_blank" class="btn secondary">[ LinkedIn ]</a>
-                    <a href="mailto:eugeniandreina@gmail.com" class="btn secondary">[ eugeniandreina@gmail.com ]</a>
+                <p>When I am not executing repository migrations in PostgreSQL, wrestling with C++ code, or fine-tuning physics collisions in Lua, you will likely find me baking desserts (like traditional panettone), playing Stardew Valley, or hanging out with my cat, Tito.</p>
+                
+                <div class="about-skills">
+                    <span>[ Linux Servers ]</span>
+                    <span>[ Proxmox & ZFS ]</span>
+                    <span>[ Lua / LÖVE2D ]</span>
+                    <span>[ Python & Data ]</span>
                 </div>
+
+                <div class="social-links-cozy">
+                    <a href="https://github.com/eunight" target="_blank" class="btn-cozy">[ GitHub ↗ ]</a>
+                    <a href="https://www.linkedin.com/in/eunight" target="_blank" class="btn-cozy">[ LinkedIn ↗ ]</a>
+                    <a href="mailto:eugeniandreina@gmail.com" class="btn-cozy">[ Email ✉ ]</a>
+                </div>  
+            </div>
+            
+            <div class="about-image-box">
+                <img src="/images/sobre_mi.jpg" alt="Cozy workspace illustration in Mérida with Tito" class="cozy-illustration-img" />
             </div>
         </div>
     </section>
