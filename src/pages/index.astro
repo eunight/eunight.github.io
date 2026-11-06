@@ -68,17 +68,32 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <section id="sobre-mi" class="about-section">
-        <div class="card about-card">
-            <div class="about-content">
-                <h2>~/Sobre_mi</h2>
-                <p>Soy estudiante de Ingeniería de Sistemas en la Universidad de Los Andes y Asistente de Soporte TI en la Direccion de Telecomunicaciones y Servicios de la ULA. Me especializo en construir y administrar infraestructura tecnológica (Linux, Proxmox, ZFS) garantizando la continuidad y disponibilidad de los servicios de red, al mismo tiempo que desarrollo arquitecturas de software e interfaces analíticas.</p>
+        <div class="about-header">
+            <h2>~/Sobre_mi 💻</h2>
+            <p class="about-subtitle">Ubicación: Mérida, Venezuela ⛰️ // Rol: Estudiante de Ingeniería de Sistemas (ULA) y Asistente de Soporte TI (DTES)</p>
+        </div>
+        <div class="about-card-split">
+            <div class="about-content-box">
+                <p>Soy estudiante de Ingeniería de Sistemas en la Universidad de Los Andes (ULA) y Asistente de Soporte TI en la Dirección de Telecomunicaciones y Servicios (DTES). Me especializo en construir y administrar infraestructura tecnológica (Linux, Proxmox, ZFS), garantizando la continuidad y disponibilidad de los servicios de red, al mismo tiempo que desarrollo arquitecturas de software e interfaces analíticas.</p>
                 <br>
                 <p>Cuando no estoy ejecutando migraciones de repositorios en PostgreSQL, lidiando con código en C++ o ajustando colisiones físicas en Lua, probablemente me encuentres horneando postres, jugando Stardew Valley o pasando el rato con mi gato Tito.</p>
-                <div class="social-links">
-                <a href="https://github.com/eunight" target="_blank" class="btn secondary">[ GitHub ]</a>
-                <a href="https://www.linkedin.com/in/eunight" target="_blank" class="btn secondary">[ LinkedIn ]</a>
-                <a href="mailto:eugeniandreina@gmail.com" class="btn secondary">[ eugeniandreina@gmail.com ]</a>
+                
+                <div class="about-skills">
+                    <span>[ Servidores Linux ]</span>
+                    <span>[ Proxmox & ZFS ]</span>
+                    <span>[ Lua / LÖVE2D ]</span>
+                    <span>[ Python & Datos ]</span>
+                </div>
+
+                <div class="social-links-cozy">
+                    <a href="https://github.com/eunight" target="_blank" class="btn-cozy">[ GitHub ↗ ]</a>
+                    <a href="https://www.linkedin.com/in/eunight" target="_blank" class="btn-cozy">[ LinkedIn ↗ ]</a>
+                    <a href="mailto:eugeniandreina@gmail.com" class="btn-cozy">[ Correo ✉ ]</a>
                 </div>  
+            </div>
+            
+            <div class="about-image-box">
+                <img src="/images/sobre_mi.jpg" alt="Ilustración de escritorio de trabajo en Mérida con Tito" class="cozy-illustration-img" />
             </div>
         </div>
     </section>
