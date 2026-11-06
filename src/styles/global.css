@@ -158,6 +158,23 @@ body.dark-mode .about-content-box { background-color: rgba(255, 255, 255, 0.02);
 }
 
 /* =========================================
+   📄 PÁGINAS DE PROYECTOS INDIVIDUALES
+   ========================================= */
+.project-detail-container { max-width: 1100px; margin: 0 auto 5rem auto; }
+.back-link { font-family: var(--font-mono); color: var(--accent-color); text-decoration: none; display: inline-block; margin-bottom: 2rem; font-size: 0.9rem; font-weight: bold; }
+.back-link:hover { text-decoration: underline; }
+.project-header-title h1 { font-size: 2.2rem; display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem; }
+.tag-title { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-secondary); font-weight: normal; }
+
+.points-title { font-family: var(--font-mono); font-size: 1.1rem; margin: 1.5rem 0 1rem 0; color: var(--text-primary); }
+.project-points { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+.project-points li { font-size: 1rem; line-height: 1.5; color: var(--text-primary); }
+.project-points li strong { font-family: var(--font-mono); font-weight: normal; color: var(--accent-color); }
+
+.text-link { color: var(--accent-color); text-decoration: underline; font-weight: bold; }
+.text-link:hover { color: var(--card-dev); }
+
+/* =========================================
    📱 ADAPTACIÓN MÓVIL UNIFICADA
    ========================================= */
 @media (max-width: 768px) {
