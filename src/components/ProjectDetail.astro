@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import type { ProjectLocalizedData } from '../data/projects';
+
+interface Props {
+  project: ProjectLocalizedData;
+  lang: 'es' | 'en';
+}
+
+const { project, lang } = Astro.props;
+const backText = lang === 'es' ? 'Volver a la Bitácora' : 'Back to Log';
+const backUrl = lang === 'es' ? '/#proyectos' : '/en/#projects';
+const pointsTitle = lang === 'es' ? '~ Puntos Clave del Trabajo' : '~ Key Work Points';
+---
+
+<Layout title={project.title}>
+    <div class="project-detail-container">
+        <a href={backUrl} class="back-link">&lt; {backText}</a>
+        
+        <div class="project-header-title">
+            <h1>{project.title} <span class="tag-title">[ {project.tagNumber} // {project.areaTag} ]</span></h1>
+            <p class="about-subtitle">{project.metaLine}</p>
+        </div>
+
+        <div class="about-card-split">
+            <div class="about-content-box">
+                <p set:html={project.descriptionHtml} />
+                
+                <h3 class="points-title">{pointsTitle}</h3>
+                <ul class="project-points">
+                    {project.points.map((pt) => (
+                        <li><strong>[{pt.label}]</strong> {pt.text}</li>
+                    ))}
+                </ul>
+                
+                <div class="about-skills">
+                    {project.skills.map((skill) => (
+                        <span>[ {skill} ]</span>
+                    ))}
+                </div>
+
+                {project.links && project.links.length > 0 && (
+                    <div class="social-links-cozy">
+                        {project.links.map((link) => (
+                            <a href={link.url} target="_blank" class="btn-cozy">[ {link.label} ↗ ]</a>
+                        ))}
+                    </div>
+                )}
+            </div>
+            
+            <div class="about-image-box">
+                <img src={project.image} alt={project.title} class="cozy-illustration-img" />
+            </div>
+        </div>
+    </div>
+</Layout>

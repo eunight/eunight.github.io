@@ -15,7 +15,7 @@ El proyecto adopta una filosofía de diseño **"Cozy Tech"**: un punto de encuen
 
 - **Motor Estático:** [Astro v5](https://astro.build/) — Renderizado estático ultrarrápido (SSG) con 0kB de JavaScript por defecto.
 - **Diseño & Estilos:** CSS3 nativo con *Custom Properties*, soporte dinámico para Modo Oscuro y grillas responsivas adaptadas a móviles.
-- **Internacionalización (i18n):** Arquitectura de rutas bilingüe estricta para Español (`/`) e Inglés (`/en`).
+- **Internacionalización (i18n) Dinámica:** Arquitectura de datos centralizada. Un único diccionario (`projects.ts`) alimenta rutas dinámicas en Español (`/proyectos/[slug]`) e Inglés (`/en/proyectos/[slug]`), eliminando la duplicación de código.
 - **CI/CD & Hosting:** Despliegue automatizado en GitHub Pages mediante GitHub Actions sobre **Node.js v22.23.4**.
 
 ---
@@ -37,25 +37,24 @@ El proyecto adopta una filosofía de diseño **"Cozy Tech"**: un punto de encuen
 ```text
 /public
   ├── Cv_Eugenia_Ramirez.pdf   <-- Curriculum en formato PDF
-  └── /assets
-      └── /images/             <-- Capturas, esquemas y recursos visuales
+  └── /images/                 <-- Ilustraciones "Cozy Tech" y recursos visuales
 /src
+  ├── /components
+  │   └── ProjectDetail.astro  <-- Componente visual único para renderizar proyectos
+  ├── /data
+  │   └── projects.ts          <-- Diccionario i18n centralizado (ES/EN)
   ├── /layouts
-  │   ├── Layout.astro         <-- Esqueleto base y lógica de temas (ES)
-  │   └── LayoutEN.astro       <-- Esqueleto base bilingüe (EN)
+  │   └── Layout.astro         <-- Esqueleto HTML base y metadatos
   ├── /pages
   │   ├── index.astro          <-- Landing page principal (Español)
-  │   ├── /en
-  │   │   ├── index.astro      <-- Landing page principal (Inglés)
-  │   │   └── /proyectos       <-- Subpáginas traducidas
-  │   └── /proyectos
-  │       ├── dspace.astro
-  │       ├── proxmox.astro
-  │       ├── huellasacasa.astro
-  │       ├── atlas.astro
-  │       └── churn.astro
+  │   ├── /proyectos
+  │   │   └── [slug].astro     <-- Generador de rutas dinámicas (Español)
+  │   └── /en
+  │       ├── index.astro      <-- Landing page principal (Inglés)
+  │       └── /proyectos
+  │           └── [slug].astro <-- Generador de rutas dinámicas (Inglés)
   └── /styles
-      └── global.css           <-- Variables de color "Cozy Tech" y media queries
+      └── global.css           <-- Variables de color "Cozy Tech", UI y adaptación móvil
 ```
 
 ---
